@@ -10,11 +10,38 @@ $(document).ready(function () {
         else {
             console.log("error");
             openModal($("#search-error"));
-        }
+        };
     });
 
 
     // USER REGISTRATION
+    $("#email-register").keyup(function () {
+        let emailRegister = $("#email-register").val();
+        if (checkEmail(emailRegister) == false) {
+            invalidFn($("#email-register"), $("#email-register-feedback"), "Format invàlid.");
+        } else {
+            validFn($("#email-register"), $("#email-register-feedback"));
+        }
+    });
+
+    $("#password-register").keyup(function () {
+        let passwordRegister = $("#password-register").val();
+        if (checkLength(passwordRegister, 8) == false) {
+            invalidFn($("#password-register"), $("#password-register-feedback"), "8 caràcters com a mínim.");
+        } else {
+            validFn($("#password-register"), $("#password-register-feedback"));
+        }
+    });
+
+    $("#re-password-register").keyup(function () {
+        let passwordRegister = $("#password-register").val();
+        let rePasswordRegister = $("#re-password-register").val();
+        if (confirmPassword(passwordRegister, rePasswordRegister) == false) {
+            invalidFn($("#re-password-register"), $("#re-password-register-feedback"), "No coincideix.");
+        } else {
+            validFn($("#re-password-register"), $("#re-password-register-feedback"));
+        }
+    });
 
     var signinData = [];
 
@@ -25,17 +52,60 @@ $(document).ready(function () {
         if ((checkEmail(emailRegister) == false) ||
             (checkLength(passwordRegister, 8) == false) ||
             (confirmPassword(passwordRegister, rePasswordRegister) == false)) {
-            console.log("error");
             alert("Error!");
         } else {
             signinData.push(emailRegister);
             signinData.push(passwordRegister);
             console.log(signinData);
-            $('#register-modal').modal('hide');          
+            $('#register-modal').modal('hide');
             openModal($("#registration-success-modal"));
-        }
+        };
     });
 
+    $("#signin-call").click(function () {
+        $('#registration-success-modal').modal('hide');
+        openModal($("#signin-modal"));
+    });
+
+    function checkLength(input, minLength) {
+        event.preventDefault();
+        if (input.length < minLength) {
+            return false;
+        } else {
+            return true;
+        };
+    };
+
+    function checkEmail(email) {
+        let emailRegex = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
+        if (!(emailRegex.test(email))) {
+            return false;
+        } else {
+            return true;
+        };
+    };
+
+    function confirmPassword(password, rePassword) {
+        if (password != rePassword) {
+            return false;
+        } else {
+            return true;
+        };
+    };
+
+    function invalidFn(field, fieldFeedback, msg) {
+        field.addClass("is-invalid");
+        fieldFeedback.addClass("invalid-feedback");
+        fieldFeedback.html(msg);
+    }
+
+    function validFn(field, fieldFeedback) {
+        field.removeClass("is-invalid");
+        field.removeClass("invalid-feedback");
+        fieldFeedback.addClass("valid-feedback");
+        field.addClass("is-valid");
+        fieldFeedback.html("");
+    }
 
 
     // USER LOGIN
@@ -47,11 +117,7 @@ $(document).ready(function () {
         $('#signin-modal').modal('hide');
         openModal($("#register-modal"));
     });
-
-    $("#signin-call").click(function () {
-        $('#registration-success-modal').modal('hide');
-        openModal($("#signin-modal"));
-    });
+    
 
     $("#signin-btn").click(function () {
         let emailInput = $("#email-input").val();
@@ -62,43 +128,14 @@ $(document).ready(function () {
         } else {
             console.log("error");
             alert("Error!");
-        }
+        };
     });
 
 
-    // FUNCTIONS
+    // OTHER
     function openModal(idModal) {
         idModal.modal("toggle");
     };
-
-    function checkLength(input, minLength) {
-        event.preventDefault();
-        if (input.length < minLength) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
-    function checkEmail(email) {
-        let emailRegex = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
-        if (!(emailRegex.test(email))) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    function confirmPassword(password, rePassword) {
-        if (password != rePassword) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-
-
 
 
 
