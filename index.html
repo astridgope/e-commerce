@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+  <!-- <link href="css/all.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Joieria</title>
+
+</head>
+
+<body id="page-top">
+
+  <!-- navbar container START-->
+  <nav class="navbar navbar-expand-sm fixed-top navbar-container">
+    <div class="container">
+      <a class="navbar-brand font-logo mb-2" href="#page-top">Joieria</a>
+      <button class="navbar-toggler navbar-toggler-right navbar-font" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- menu & search container-->
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0 font-menu">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#rings">Anells</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#earrings">Arracades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#bracelets">Polseres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#necklaces">Collarets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#misc">Altres</a>
+          </li>
+        </ul>
+        <form id="search-form" class="form-inline my-2 my-lg-0">
+          <input type="text" class="form-control" id="search-field" placeholder="Cerca">
+          <button id="search-btn" type="button" class="btn-blank">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- user & shopping cart-->
+      <div>
+        <button id="user-btn" type="button" class="btn-blank">
+          <i class="fas fa-user"></i>
+        </button>
+        <button type="button" class="btn-blank">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div> <!-- user & shopping cart END-->
+    </div> <!-- navbar container END-->
+  </nav>
+
+  <!-- header image -->
+  <header>
+    <div>
+      <img src="img/ring-repair.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+  </header>
+
+  <!-- items gallery START -->
+  <div class="mb-5">
+    <h2 class="font-title text-center">Productes</h2>
+    <p class="font-paragraph text-center">Or · Plata</p>
+  </div>
+  <div id="items-gallery" class="gallery">
+    <div id="items-row1" class="row">
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/1.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/2_1.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/4_5.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/6_4.jpg">
+      </div>
+    </div>
+    <div id="items-row2" class="row">
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/7_3.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/8_3.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/9_3.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/10_5.jpg">
+      </div>
+    </div>
+    <div id="items-row3" class="row">
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/11_4.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/12_4.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/14_3.jpg">
+      </div>
+      <div class="mb-3 col-sm-3">
+        <img class="img-fluid" src="img/items/15_2.jpg">
+      </div>
+    </div>
+  </div> <!-- items gallery END -->
+
+  <!-- search error modal -->
+  <div id="search-error" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Introdueix una paraula de 3 caràcters com a mínim.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sign in modal -->
+  <div id="signin-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Inicia sessió</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signin-form" class="needs-validation" novalidate>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password-input" placeholder="Contrasenya">
+            </div>
+            <button type="submit" class="btn btn-secondary">Inicia</button>
+          </form>
+          <a href="#" id="register-call">
+            <small class="form-text text-info text-center">Encara no estàs registrat?</small>
+          </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- register modal -->
+  <div id="register-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registra't</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="register-form">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email-register" placeholder="Email">
+              <div id="email-register-feedback"></div>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password-register" placeholder="Contrasenya">
+              <div id="password-register-feedback"></div>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="re-password-register" placeholder="Confirma contrasenya">
+              <div id="re-password-register-feedback"></div>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="province-register">
+                <option selected disabled value="">Província</option>
+                <option>Barcelona</option>
+                <option>Tarragona</option>
+                <option>Lleida</option>
+                <option>Girona</option>
+              </select>
+            </div>
+            <button id="register-btn" type="submit" class="btn btn-secondary">Registra't</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- successful registration modal -->
+  <div id="registration-success-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enhorabona!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>T'has registrat correctament.</p>
+        </div>
+        <a href="#" id="signin-call">
+          <small class="form-text text-info text-center">Inicia sessió</small>
+        </a>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- <script src="js/jquery/jquery-3.4.1.slim.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- <script src="js/popper.min.js"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

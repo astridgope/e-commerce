@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  text-decoration: none;
+  color: #222;
+}
+
+.font-logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #222;
+}
+.font-logo:hover {
+  color: #c29958;
+}
+
+.font-menu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.font-menu a {
+  color: #222;
+}
+.font-menu a:hover {
+  color: #c29958;
+  transition: all 0.2s linear;
+}
+
+.font-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #222;
+}
+
+.font-paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #555;
+}
+
+.navbar-container {
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 3.5rem;
+}
+
+.button > i:hover {
+  color: #c29958;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(194, 153, 88, 0.25);
+  transition: all 0.2s linear;
+}
+
+#search-field {
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 2rem;
+}
+
+.btn-blank {
+  background-color: rgba(0, 0, 0, 0);
+  color: #222;
+  border: none;
+}
+
+i:hover {
+  color: #c29958;
+}
+
+/*# sourceMappingURL=style.css.map */

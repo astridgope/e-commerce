@@ -1,0 +1,80 @@
+* {
+    text-decoration: none;
+    color: $color-black;
+}
+
+.font-logo {
+    font-family: $font-serif;
+    font-weight: $weight-regular;
+    font-size: 2.5rem;
+    color: $color-black;
+    
+    &:hover {
+        color: $color-gold;
+    }
+}
+
+.font-menu {
+    font-family: $font-sans;
+    font-weight: $weight-bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    
+    a {
+        color: $color-black;
+        &:hover {
+            color: $color-gold;
+            transition: all .2s linear;            
+        }
+    }
+}
+
+.font-title {
+    font-family: $font-serif;
+    font-weight: $weight-medium;
+    color: $color-black;
+}
+
+.font-paragraph {
+    font-family: $font-sans;
+    font-weight: $weight-semibold;
+    color: $color-gray;    
+}
+
+.navbar-container {
+    background-color: rgba(255,255,255,0.75);
+    height: 3.5rem;
+}
+
+.button > i:hover {    
+    color: $color-gold;    
+}
+
+.form-control:focus {
+    // border-color: $color-gold;    
+    box-shadow: 0 0 0 0.2rem $color-gold-transparent;
+    transition: all .2s linear
+}
+
+#search-field {
+    background-color: $color-soft;
+    border: 0;
+    border-radius: 2rem;
+}
+
+.btn-blank {
+    background-color: rgba(0,0,0,0);
+    color: $color-black;    
+    border: none;
+}
+
+i:hover {
+    color: $color-gold;
+}
+
+// .form-signin, .form-register{
+//     width: 100%;
+//     max-width: 330px;
+//     padding: 15px;
+//     margin: auto;
+//   }
