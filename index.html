@@ -123,26 +123,6 @@
     </div>
   </div> <!-- items gallery END -->
 
-  <!-- search error modal -->
-  <div id="search-error" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Error</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Introdueix una paraula de 3 caràcters com a mínim.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- sign in modal -->
   <div id="signin-modal" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -156,12 +136,14 @@
         <div class="modal-body">
           <form id="signin-form" class="needs-validation" novalidate>
             <div class="form-group">
-              <input type="email" class="form-control" id="email-input" placeholder="Email">
+              <input type="email" class="form-control" id="email-signin" placeholder="Email">
+              <div id="email-signin-feedback"></div>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="password-input" placeholder="Contrasenya">
+              <input type="password" class="form-control" id="password-signin" placeholder="Contrasenya">
+              <div id="password-signin-feedback"></div>
             </div>
-            <button type="submit" class="btn btn-secondary">Inicia</button>
+            <button id="signin-btn" type="submit" class="btn btn-secondary">Inicia</button>
           </form>
           <a href="#" id="register-call">
             <small class="form-text text-info text-center">Encara no estàs registrat?</small>
@@ -200,13 +182,14 @@
               <div id="re-password-register-feedback"></div>
             </div>
             <div class="form-group">
-              <select class="form-control" id="province-register">
-                <option selected disabled value="">Província</option>
+              <select class="form-control" id="province-register" required>
+                <option selected disabled>Selecciona província...</option>
                 <option>Barcelona</option>
                 <option>Tarragona</option>
                 <option>Lleida</option>
                 <option>Girona</option>
               </select>
+              <div id="province-register-feedback"></div>
             </div>
             <button id="register-btn" type="submit" class="btn btn-secondary">Registra't</button>
           </form>
@@ -237,13 +220,29 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
         </div>
-
       </div>
     </div>
   </div>
 
-
-
+  <!-- message modal -->
+  <div id="msg-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>message</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
