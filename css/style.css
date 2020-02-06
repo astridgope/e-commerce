@@ -29,6 +29,20 @@
   transition: all 0.2s linear;
 }
 
+.font-dropdown {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.font-dropdown a {
+  color: #555;
+}
+.font-dropdown a:hover {
+  color: #c29958;
+  transition: all 0.2s linear;
+}
+
 .font-title {
   font-family: "Playfair Display", serif;
   font-weight: 500;
@@ -59,6 +73,7 @@
   background-color: #f7f7f7;
   border: 0;
   border-radius: 2rem;
+  width: 12rem;
 }
 
 .btn-blank {

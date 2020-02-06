@@ -2,7 +2,6 @@
 <html lang="ca">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,21 +12,75 @@
   <link rel="stylesheet" href="css/style.css">
 
   <title>Joieria</title>
-
 </head>
 
 <body id="page-top">
 
-  <!-- navbar container START-->
-  <nav class="navbar navbar-expand-sm fixed-top navbar-container">
+  <!-- navbar container-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-container" id="mainNav">
     <div class="container">
-      <a class="navbar-brand font-logo mb-2" href="#page-top">Joieria</a>
-      <button class="navbar-toggler navbar-toggler-right navbar-font" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive">
+      <a class="navbar-brand js-scroll-trigger font-logo mr-auto" href="#page-top">Joieria</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="mx-auto">
+          <ul class="navbar-nav font-menu">
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger" href="#rings" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Anells
+              </a>
+              <div class="dropdown-menu font-dropdown" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Compromís</a>
+                <a class="dropdown-item" href="#">Aliances</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Tots</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#earrings">Arracades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#bracelets">Polseres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#necklaces">Collarets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#misc">Altres</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ml-auto">
+          <form id="menu-form" class="form-inline">
+            <input type="text" class="form-control" id="search-field" placeholder="Cerca">
+            <button id="search-btn" type="button" class="btn-blank">
+              <i class="fas fa-search"></i>
+            </button>
+            <button id="user-btn" type="button" class="btn-blank">
+              <i class="fas fa-user"></i>
+            </button>
+            <button id="cart-btn" type="button" class="btn-blank">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      <!-- menu & search container-->
+
+  <!-- <nav class="navbar navbar-expand-sm fixed-top navbar-container">
+    <div class="container">
+      <a class="navbar-brand font-logo mb-2" href="#page-top">Joieria</a>
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0 font-menu">
           <li class="nav-item">
@@ -46,25 +99,25 @@
             <a class="nav-link js-scroll-trigger" href="#misc">Altres</a>
           </li>
         </ul>
+        
         <form id="search-form" class="form-inline my-2 my-lg-0">
           <input type="text" class="form-control" id="search-field" placeholder="Cerca">
           <button id="search-btn" type="button" class="btn-blank">
             <i class="fas fa-search"></i>
           </button>
         </form>
+        
+        <div>
+          <button id="user-btn" type="button" class="btn-blank">
+            <i class="fas fa-user"></i>
+          </button>
+          <button id="cart-btn" type="button" class="btn-blank">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
       </div>
-
-      <!-- user & shopping cart-->
-      <div>
-        <button id="user-btn" type="button" class="btn-blank">
-          <i class="fas fa-user"></i>
-        </button>
-        <button type="button" class="btn-blank">
-          <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div> <!-- user & shopping cart END-->
-    </div> <!-- navbar container END-->
-  </nav>
+    </div>
+  </nav> -->
 
   <!-- header image -->
   <header>
@@ -155,7 +208,6 @@
       </div>
     </div>
   </div>
-  </div>
 
   <!-- register modal -->
   <div id="register-modal" class="modal" tabindex="-1" role="dialog">
@@ -213,12 +265,12 @@
         </div>
         <div class="modal-body">
           <p>T'has registrat correctament.</p>
+          <a href="#" id="signin-call">
+            <small class="form-text text-info text-center">Inicia sessió</small>
+          </a>
         </div>
-        <a href="#" id="signin-call">
-          <small class="form-text text-info text-center">Inicia sessió</small>
-        </a>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">D'acord</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tanca</button>
         </div>
       </div>
     </div>

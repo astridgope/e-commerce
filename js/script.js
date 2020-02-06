@@ -2,8 +2,17 @@ $(document).ready(function () {
 
     // SEARCH CHECK
     $("#search-btn").click(function () {
-        let searchField = $("#search-field").val();
-        if (checkLength(searchField, 3) == true) {
+        search($("#search-field").val(), 3);
+    });
+
+    $("#search-field").keypress(function (event) {
+        if (event.keyCode == 13) {
+            search($("#search-field").val(), 3);
+        }
+    });
+
+    function search(searchInput, minLength) {
+        if (checkLength(searchInput, minLength) == true) {
             console.log("success");
             msgModal("Resultats de la cerca", "0");
         }
@@ -11,7 +20,7 @@ $(document).ready(function () {
             console.log("error");
             msgModal("Error", "Introdueix una paraula de com a mínim 3 caràcters.");
         };
-    });
+    }
 
 
     // USER REGISTRATION
@@ -33,7 +42,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#re-password-register").change(function () {        
+    $("#re-password-register").change(function () {
         let rePassword = $(this).val();
         let password = $("#password-register").val();
         if (confirmPassword(rePassword, password) == false) {
@@ -64,7 +73,7 @@ $(document).ready(function () {
             (checkValidClass(password) == false) ||
             (checkValidClass(rePassword) == false) ||
             (checkValidClass(province) == false)) {
-            alert("Error!");
+            msgModal("Error", "Revisa les dades introduïdes.");
         } else {
             signinData.push(email.val());
             signinData.push(password.val());
@@ -155,7 +164,7 @@ $(document).ready(function () {
         if ((email == signinData[0]) && (password == signinData[1])) {
             console.log("success");
             $('#signin-modal').modal('hide');
-            msgModal("Benvigut/da!", "Has iniciat sessió correctament.");         
+            msgModal("Benvigut/da!", "Has iniciat sessió correctament.");
         } else {
             console.log("error");
             msgModal("Error", "Revisa les dades introduïdes.");
@@ -167,7 +176,11 @@ $(document).ready(function () {
     $("#user-btn").click(function () {
         openModal($("#signin-modal"));
     });
-    
+
+    $("#cart-btn").click(function () {
+        msgModal("Compra", "No tens cap article a la cistella.");
+    });
+
     $("#signin-call").click(function () {
         $('#registration-success-modal').modal('hide');
         openModal($("#signin-modal"));
@@ -183,10 +196,17 @@ $(document).ready(function () {
         $("#msg-modal h5").html(title);
         $("#msg-modal p").html(msg);
     }
-    
+
     function openModal(idModal) {
         idModal.modal("toggle");
     };
+
+
+
+
+
+
+
 
 });
 
