@@ -15,166 +15,224 @@
 </head>
 
 <body id="page-top">
-
-  <!-- navbar container-->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-container" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger font-logo mr-auto" href="#page-top">Joieria</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <div class="mx-auto">
-          <ul class="navbar-nav font-menu">
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger" href="#rings" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Anells
-              </a>
-              <div class="dropdown-menu font-dropdown" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Compromís</a>
-                <a class="dropdown-item" href="#">Aliances</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Tots</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#earrings">Arracades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#bracelets">Polseres</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#necklaces">Collarets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#misc">Altres</a>
-            </li>
-          </ul>
-        </div>
-        <div class="ml-auto">
-          <form id="menu-form" class="form-inline">
-            <input type="text" class="form-control" id="search-field" placeholder="Cerca">
-            <button id="search-btn" type="button" class="btn-blank">
-              <i class="fas fa-search"></i>
-            </button>
-            <button id="user-btn" type="button" class="btn-blank">
-              <i class="fas fa-user"></i>
-            </button>
-            <button id="cart-btn" type="button" class="btn-blank">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-  <!-- <nav class="navbar navbar-expand-sm fixed-top navbar-container">
-    <div class="container">
-      <a class="navbar-brand font-logo mb-2" href="#page-top">Joieria</a>
-     
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0 font-menu">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#rings">Anells</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#earrings">Arracades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#bracelets">Polseres</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#necklaces">Collarets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#misc">Altres</a>
-          </li>
-        </ul>
-        
-        <form id="search-form" class="form-inline my-2 my-lg-0">
-          <input type="text" class="form-control" id="search-field" placeholder="Cerca">
-          <button id="search-btn" type="button" class="btn-blank">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-        
-        <div>
-          <button id="user-btn" type="button" class="btn-blank">
-            <i class="fas fa-user"></i>
-          </button>
-          <button id="cart-btn" type="button" class="btn-blank">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav> -->
-
-  <!-- header image -->
   <header>
+    <!-- navbar container-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-container" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand font-logo mr-auto" href="#page-top">Joieria</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <section class="collapse navbar-collapse" id="navbarResponsive">
+          <div class="mx-auto">
+            <ul class="navbar-nav font-menu">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#rings" id="dropdownRings" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Anells</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownRings">
+                  <a class="dropdown-item" href="#">Compromís</a>
+                  <a class="dropdown-item" href="#">Aliances</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tot</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#earrings" id="dropdownEarrings" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Arracades</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownEarrings">
+                  <a class="dropdown-item" href="#">Argolles</a>
+                  <a class="dropdown-item" href="#">Penjants</a>
+                  <a class="dropdown-item" href="#">Perles</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tot</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#bracelets" id="dropdownBracelets" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Polseres</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownBracelets">
+                  <a class="dropdown-item" href="#">Cadenes</a>
+                  <a class="dropdown-item" href="#">Esclaves</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tot</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#necklaces" id="dropdownNecklaces" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Collarets</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownNecklaces">
+                  <a class="dropdown-item" href="#">Cadenes</a>
+                  <a class="dropdown-item" href="#">Perles</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tot</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#misc" id="dropdownMisc" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Altres</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMisc">
+                  <a class="dropdown-item" href="#">Rellotges</a>
+                  <a class="dropdown-item" href="#">Regals Nadons</a>
+                  <a class="dropdown-item" href="#">Marcs</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tot</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="ml-auto">
+            <form id="menu-form" class="form-inline">
+              <input type="text" class="form-control" id="search-field" placeholder="Cerca">
+              <button id="search-btn" type="button" class="btn-blank">
+                <i class="fas fa-search"></i>
+              </button>
+              <button id="user-btn" type="button" class="btn-blank">
+                <i class="fas fa-user"></i>
+              </button>
+              <button id="cart-btn" type="button" class="btn-blank">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </nav>
+
+
+    <!-- header image -->
     <div>
       <img src="img/ring-repair.jpg" class="img-fluid" alt="Responsive image">
     </div>
   </header>
 
-  <!-- items gallery START -->
+
   <div class="mb-5">
     <h2 class="font-title text-center">Productes</h2>
     <p class="font-paragraph text-center">Or · Plata</p>
   </div>
-  <div id="items-gallery" class="gallery">
+  <!-- items gallery START -->
+  <div id="items-gallery" class="gallery mx-5">
     <div id="items-row1" class="row">
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay ">
         <img class="img-fluid" src="img/items/1.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/2_1.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/4_5.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/6_4.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
     </div>
     <div id="items-row2" class="row">
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/7_3.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/8_3.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/9_3.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/10_5.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
     </div>
     <div id="items-row3" class="row">
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/11_4.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/12_4.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/14_3.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
-      <div class="mb-3 col-sm-3">
+      <div class="mb-3 col-sm-3 overlay">
         <img class="img-fluid" src="img/items/15_2.jpg">
+        <div class="content">
+          <div class="text">Veure detall</div>
+        </div>
       </div>
     </div>
   </div> <!-- items gallery END -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Joieria 2020</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Política de privacitat</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Termes d'ús</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- sign in modal -->
   <div id="signin-modal" class="modal" tabindex="-1" role="dialog">

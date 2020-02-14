@@ -15,30 +15,14 @@
   color: #c29958;
 }
 
-.font-menu {
+.font-menu a {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
-}
-.font-menu a {
   color: #222;
 }
 .font-menu a:hover {
-  color: #c29958;
-  transition: all 0.2s linear;
-}
-
-.font-dropdown {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-.font-dropdown a {
-  color: #555;
-}
-.font-dropdown a:hover {
   color: #c29958;
   transition: all 0.2s linear;
 }
@@ -84,6 +68,86 @@
 
 i:hover {
   color: #c29958;
+}
+
+.footer {
+  padding: 25px 0;
+  text-align: center;
+  background-color: #222;
+}
+.footer span.copyright {
+  font-size: 1rem;
+  line-height: 40px;
+  text-transform: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #555;
+}
+.footer ul.quicklinks {
+  font-size: 0.8rem;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.footer ul.quicklinks li a {
+  font-family: "Montserrat", sans-serif;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.footer ul.quicklinks li a:hover {
+  color: #c29958;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+ul.social-buttons li a {
+  font-size: 15px;
+  line-height: 30px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  outline: none;
+  background-color: #555;
+}
+ul.social-buttons li a:hover {
+  background-color: #c29958;
+}
+ul.social-buttons li a i {
+  color: #222;
+}
+
+.overlay {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.content {
+  opacity: 0;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #1c87c9;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+}
+
+.overlay .content:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

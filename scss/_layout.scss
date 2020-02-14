@@ -14,37 +14,18 @@
     }
 }
 
-.font-menu {
+.font-menu a {
     font-family: $font-sans;
     font-weight: $weight-bold;
     font-size: 0.85rem;
     text-transform: uppercase;
-    
-    a {
-        color: $color-black;
+    color: $color-black;    
         &:hover {
             color: $color-gold;
             transition: all .2s linear;            
         }
     }
-}
 
-// ULL!!
-.font-dropdown {
-    font-family: $font-sans;
-    font-weight: $weight-bold;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    
-    a {
-        color: $color-gray;
-        &:hover {
-            color: $color-gold;
-            transition: all .2s linear;            
-        }
-    }
-}
-// ULL!!
 
 .font-title {
     font-family: $font-serif;
@@ -90,9 +71,84 @@ i:hover {
     color: $color-gold;
 }
 
-// .form-signin, .form-register{
-//     width: 100%;
-//     max-width: 330px;
-//     padding: 15px;
-//     margin: auto;
-//   }
+// footer
+.footer {
+    padding: 25px 0;
+    text-align: center;
+    background-color: $color-black;
+    span.copyright {
+      font-size: 1rem;
+      line-height: 40px;
+      text-transform: none;
+      font-family: $font-serif;
+      font-weight: $weight-medium;
+      color: $color-gray;
+    }
+    ul.quicklinks {
+      font-size: 0.80rem;
+      line-height: 40px;
+      margin-bottom: 0;
+      text-transform: none;           
+      li {
+          a {              
+            font-family: $font-sans;
+            color: $color-soft;
+            text-decoration: none; 
+            &:hover {
+                color: $color-gold;
+            }
+          }
+      }  
+    }
+  }
+  
+  ul.social-buttons {
+    margin-bottom: 0;
+    li {
+      a {
+        font-size: 15px;
+        line-height: 30px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        outline: none;
+        background-color: $color-gray;
+        &:hover {
+            background-color: $color-gold;
+        }
+        i {
+            color: $color-black;
+        }
+      }
+    }
+  }
+
+  .overlay{
+    position:relative;
+    padding:0;
+    width:100%;
+    display:block;
+    cursor:pointer;
+    overflow:hidden;
+    }
+    
+    .content {
+    opacity:0;
+    font-size: 1rem;
+    font-family: $font-sans;
+    position:absolute;
+    top:0;
+    left:0;
+    color:#1c87c9;
+    background-color:rgba(200,200,200,0.5);
+    width:100%;
+    height:100%;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align:center;
+    }
+    .overlay .content:hover { opacity:1; }
