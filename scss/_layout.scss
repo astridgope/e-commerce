@@ -16,7 +16,8 @@
     }
 }
 
-.font-menu a {
+.font-menu {
+    a {
     font-family: $font-sans;
     font-weight: $weight-bold;
     font-size: 0.85rem;
@@ -27,6 +28,10 @@
             transition: all .2s linear;            
         }
     }
+    .dropdown-item {
+        font-size: 0.75rem !important;
+    }
+}
 
 .font-title {
     font-family: $font-serif;
@@ -50,7 +55,6 @@
 }
 
 .form-control:focus {
-    // border-color: $color-gold;    
     box-shadow: 0 0 0 0.2rem $color-gold-transparent;
     transition: all .2s linear;
 }

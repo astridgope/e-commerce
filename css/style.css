@@ -26,6 +26,9 @@
   color: #c29958;
   transition: all 0.2s linear;
 }
+.font-menu .dropdown-item {
+  font-size: 0.75rem !important;
+}
 
 .font-title {
   font-family: "Playfair Display", serif;
@@ -68,6 +71,25 @@
 
 i:hover {
   color: #c29958;
+}
+
+#gallery a:hover::before {
+  content: "Veure detall";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  opacity: 0.25;
+  z-index: 1;
+  text-align: center;
+  line-height: 100px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  transition: all 5s linear;
 }
 
 .footer {
@@ -116,38 +138,6 @@ ul.social-buttons li a:hover {
 }
 ul.social-buttons li a i {
   color: #222;
-}
-
-.overlay {
-  position: relative;
-  padding: 0;
-  width: 100%;
-  display: block;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.content {
-  opacity: 0;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #1c87c9;
-  background-color: rgba(200, 200, 200, 0.5);
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 400ms ease-out;
-  -moz-transition: all 400ms ease-out;
-  -o-transition: all 400ms ease-out;
-  -ms-transition: all 400ms ease-out;
-  transition: all 400ms ease-out;
-  text-align: center;
-}
-
-.overlay .content:hover {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
